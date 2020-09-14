@@ -5,6 +5,10 @@ import Search from '../views/Search/Search.vue'
 import Profile from '../views/Profile/Profile.vue'
 import Order from '../views/Order/Order.vue'
 import Login from '../views/Login/Login.vue'
+import Shop from '../views/Shop/Shop.vue'
+import ShopGoods from '../views/Shop/ShopGoods/ShopGoods.vue'
+import ShopRatings from '../views/Shop/ShopRatings/ShopRatings.vue'
+import ShopInfo from '../views/Shop/ShopInfo/ShopInfo.vue'
 
 Vue.use(VueRouter)
 
@@ -49,6 +53,32 @@ const routes: Array<RouteConfig> = [
     path: '/login',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/shop',
+    name: 'Shop',
+    component: Shop,
+    children: [
+      {
+        path: '/shop/goods',
+        name: 'ShopGoods',
+        component: ShopGoods
+      },
+      {
+        path: '/shop/ratings',
+        name: 'ShopRatings',
+        component: ShopRatings
+      },
+      {
+        path: '/shop/info',
+        name: 'ShopInfo',
+        component: ShopInfo
+      },
+      {
+        path: '',
+        redirect: '/shop/goods'
+      }
+    ]
   }
 ]
 

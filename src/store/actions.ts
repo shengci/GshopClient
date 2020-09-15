@@ -62,12 +62,12 @@ export default {
   },
 
   //  异 步 获 取 商 家 评 价 列 表
-  async getShopRatings({ commit }, cb) {
+  async getShopRatings({ commit }, callback) {
     const result = await reqShopRatings()
     if (result.code === 0) {
       const ratings = result.data
       commit(RECEIVE_RATINGS, { ratings })
-      cb && cb()
+      callback && callback()
     }
   },
 

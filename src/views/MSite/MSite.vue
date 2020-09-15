@@ -133,7 +133,7 @@ export default {
     }
   },
   watch: {
-    categorys(value) {
+    categorys() {
       // setTimeout(() => {
       //   const swiper = new Swiper('.swiper-container', {
       //     loop: true,
@@ -143,7 +143,7 @@ export default {
       //   })
       // }, 100)
       this.$nextTick(() => {
-        const swiper = new Swiper('.swiper-container', {
+        new Swiper('.swiper-container', {
           loop: true,
           Pagination: {
             el: '.swiper-pagination'

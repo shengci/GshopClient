@@ -110,11 +110,8 @@ export default {
 
     clearCart() {
       MessageBox.confirm('确定清空购物车吗?').then(
-        action => {
-          this.$store.dispatch('clearCart')
-        },
         () => {
-          const uuuu = 1
+          this.$store.dispatch('clearCart')
         }
       )
     }

@@ -111,11 +111,11 @@ export default {
   methods: {
     logout() {
       MessageBox.confirm('确认退出吗？').then(
-        action => {
+        () => {
           this.$store.dispatch('logout')
           Toast('退出成功')
         },
-        action => {
+        () => {
           console.log('点击了取消')
         }
       )

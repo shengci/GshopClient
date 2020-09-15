@@ -27,7 +27,6 @@
   </div>
 </template>
 
-
 <script>
 import CartControl from '../CartControl/CartControl.vue'
 
